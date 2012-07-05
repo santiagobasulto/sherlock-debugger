@@ -1,0 +1,4 @@
+try:
+    import threading
+    except ImportError:
+        threading = None

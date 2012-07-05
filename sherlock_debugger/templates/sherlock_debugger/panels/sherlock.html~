@@ -1,0 +1,21 @@
+<h4>Displaying {{count}} records</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Value</th>
+            <th>ModulePath</th>
+            <th>Module</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for record in records %}
+            <tr class="{% cycle 'djDebugOdd' 'djDebugEven' %}">
+                <td>{{ record.class_name }}</td>
+                <td>{{ record.value }}</td>
+                <td>{{ record.modulepath }}</td>
+                
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
